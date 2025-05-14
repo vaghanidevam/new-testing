@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "frontend": "cd react-pro && npm run dev",
-    "backend": "cd server && node index.js",
-    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
-  },
+ "scripts": {
+  "postinstall": "npm install concurrently",
+  "frontend": "cd react-pro && npm run dev",
+  "backend": "cd server && node index.js",
+  "dev": "concurrently \"npm run frontend\" \"npm run backend\""
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^9.1.2"
   }
 }
